@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Message Component 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+</head>
+
+<body>
+    <br><br><br>
+    <div id="root" class="container">
+
+        <modal v-if="showModal" @close="showModal = false">
+            <p>
+                Elemento renderizado por un slot
+            </p>
+        </modal>
+
+        <button @click="showModal = true">Mostrar modal</button>
+
+    </div>
+
+    <script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+
+</html>
